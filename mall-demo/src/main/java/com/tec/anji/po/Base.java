@@ -1,7 +1,9 @@
-package com.tec.anji.model;
+package com.tec.anji.po;
 
-@lombok.Data
-public class Data {
+import lombok.Data;
+
+@Data
+public class Base {
 
     private String image;
 
