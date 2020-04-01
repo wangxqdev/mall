@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/home")
@@ -94,6 +91,8 @@ public class HomeController {
         List<Goods> goodsList = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
             Goods goods = new Goods();
+            String uuid = UUID.randomUUID().toString();
+            goods.setId(uuid.substring(uuid.lastIndexOf("-") + 1));
             goods.setImage("http://localhost:8090/img/timg.png");
             goods.setLink("#");
             goods.setTitle(String.format("%s女装女装女装女装女装女装女装女装女装女装%d%d", type, page, i));
