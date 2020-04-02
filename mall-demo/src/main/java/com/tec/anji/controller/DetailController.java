@@ -27,9 +27,9 @@ public class DetailController {
         itemInfo.setLowNowPrice(38.50);
         itemInfo.setDiscountDesc("活动价");
         List<String> topImages = Stream.of("http://localhost:8090/img/dress01.jpg",
-                "http://localhost:8090/img/dress01.jpg",
-                "http://localhost:8090/img/dress01.jpg",
-                "http://localhost:8090/img/dress01.jpg")
+                "http://localhost:8090/img/dress02.jpg",
+                "http://localhost:8090/img/dress03.jpg",
+                "http://localhost:8090/img/dress04.jpg")
                 .collect(Collectors.toList());
         itemInfo.getTopImages().addAll(topImages);
         List<String> columns = Stream.of("销售 1580", "收藏33人", "默认快递").collect(Collectors.toList());
