@@ -1,4 +1,4 @@
-package com.tec.anji.po;
+package com.tec.anji.po.home;
 
 import lombok.Data;
 

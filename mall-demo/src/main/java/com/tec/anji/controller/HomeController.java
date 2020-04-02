@@ -1,8 +1,8 @@
 package com.tec.anji.controller;
 
-import com.tec.anji.po.Banner;
-import com.tec.anji.po.Goods;
-import com.tec.anji.po.Recommend;
+import com.tec.anji.po.home.Banner;
+import com.tec.anji.po.home.Goods;
+import com.tec.anji.po.home.Recommend;
 import com.tec.anji.vo.MultiData;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

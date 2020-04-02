@@ -1,7 +1,7 @@
 package com.tec.anji.vo;
 
-import com.tec.anji.po.Banner;
-import com.tec.anji.po.Recommend;
+import com.tec.anji.po.home.Banner;
+import com.tec.anji.po.home.Recommend;
 
 import java.util.HashMap;
 import java.util.List;
