@@ -1,5 +1,6 @@
 package com.tec.anji.controller;
 
+import com.tec.anji.po.detail.DetailInfo;
 import com.tec.anji.po.detail.ItemInfo;
 import com.tec.anji.po.detail.ShopInfo;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ public class DetailController {
 
     @GetMapping("/{id}")
     public Object getDetail(@PathVariable String id) {
+        /* itemInfo */
         ItemInfo itemInfo = new ItemInfo();
         itemInfo.setTitle("【仲陌美】2018春秋季新款原宿风长袖T恤女bf潮学生韩版拼接白色复古港味宽松百搭上衣打底");
         itemInfo.setDesc("新款上市");
@@ -32,18 +34,24 @@ public class DetailController {
                 "http://localhost:8090/img/dress04.jpg")
                 .collect(Collectors.toList());
         itemInfo.getTopImages().addAll(topImages);
+        /* columns */
         List<String> columns = Stream.of("销售 1580", "收藏33人", "默认快递").collect(Collectors.toList());
+        /* shopInfo */
         ShopInfo shopInfo = new ShopInfo("退货补运费", "全国包邮", "7天无理由退货", "72小时发货");
         shopInfo.setShopLogo("http://s11.mogucdn.com/mlcdn/c45406/170714_0cg7e9a3ldij28dikejaef50ih38g_300x300.jpg");
         shopInfo.setName("仲陌美");
         shopInfo.setCSells(57876);
         shopInfo.setCGoods(99);
         shopInfo.setCFans(17145);
+        /* detailInfo */
+        DetailInfo detailInfo = new DetailInfo();
+        detailInfo.setDesc("2018春秋冬白色T恤女长袖宽松T恤女打底衫韩版新款圆领纯棉百搭上衣");
 
         Map<String, Object> resultMap = new HashMap<>();
         resultMap.put("itemInfo", itemInfo);
         resultMap.put("columns", columns);
         resultMap.put("shopInfo", shopInfo);
+        resultMap.put("detailInfo", detailInfo);
 
         Map<String, Object> responseMap = new HashMap<>();
         responseMap.put("result", resultMap);
