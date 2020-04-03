@@ -33,7 +33,12 @@ public class DetailController {
                 .collect(Collectors.toList());
         itemInfo.getTopImages().addAll(topImages);
         List<String> columns = Stream.of("销售 1580", "收藏33人", "默认快递").collect(Collectors.toList());
-        ShopInfo shopInfo = new ShopInfo(new String[]{"退货补运费", "全国包邮", "7天无理由退货", "72小时发货"});
+        ShopInfo shopInfo = new ShopInfo("退货补运费", "全国包邮", "7天无理由退货", "72小时发货");
+        shopInfo.setShopLogo("http://s11.mogucdn.com/mlcdn/c45406/170714_0cg7e9a3ldij28dikejaef50ih38g_300x300.jpg");
+        shopInfo.setName("仲陌美");
+        shopInfo.setCSells(57876);
+        shopInfo.setCGoods(99);
+        shopInfo.setCFans(17145);
 
         Map<String, Object> resultMap = new HashMap<>();
         resultMap.put("itemInfo", itemInfo);
