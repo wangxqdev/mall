@@ -3,14 +3,13 @@ package com.tec.anji.controller;
 import com.tec.anji.po.detail.DetailInfo;
 import com.tec.anji.po.detail.ItemInfo;
 import com.tec.anji.po.detail.ShopInfo;
+import com.tec.anji.po.home.Goods;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -46,12 +45,26 @@ public class DetailController {
         /* detailInfo */
         DetailInfo detailInfo = new DetailInfo();
         detailInfo.setDesc("2018春秋冬白色T恤女长袖宽松T恤女打底衫韩版新款圆领纯棉百搭上衣");
+        /* recommends */
+        List<Goods> recommends = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            Goods goods = new Goods();
+            String uuid = UUID.randomUUID().toString();
+            goods.setId(uuid.substring(uuid.lastIndexOf("-") + 1));
+            goods.setImage("http://localhost:8090/img/timg.png");
+            goods.setLink("#");
+            goods.setTitle("女装女装女装女装女装女装女装女装女装女装");
+            goods.setPrice(120.78);
+            goods.setCollect(7680);
+            recommends.add(goods);
+        }
 
         Map<String, Object> resultMap = new HashMap<>();
         resultMap.put("itemInfo", itemInfo);
         resultMap.put("columns", columns);
         resultMap.put("shopInfo", shopInfo);
         resultMap.put("detailInfo", detailInfo);
+        resultMap.put("recommends", recommends);
 
         Map<String, Object> responseMap = new HashMap<>();
         responseMap.put("result", resultMap);
