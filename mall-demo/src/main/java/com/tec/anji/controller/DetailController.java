@@ -22,7 +22,7 @@ public class DetailController {
         /* itemInfo */
         ItemInfo itemInfo = new ItemInfo();
         itemInfo.setTitle("【仲陌美】2018春秋季新款原宿风长袖T恤女bf潮学生韩版拼接白色复古港味宽松百搭上衣打底");
-        itemInfo.setDesc("新款上市");
+        itemInfo.setDesc("2018春秋冬白色T恤女长袖宽松T恤女打底衫韩版新款圆领纯棉百搭上衣");
         itemInfo.setPrice(38.50);
         itemInfo.setOldPrice(69.00);
         itemInfo.setLowNowPrice(38.50);
@@ -53,7 +53,7 @@ public class DetailController {
             goods.setId(uuid.substring(uuid.lastIndexOf("-") + 1));
             goods.setImage("http://localhost:8090/img/timg.png");
             goods.setLink("#");
-            goods.setTitle("女装女装女装女装女装女装女装女装女装女装");
+            goods.setTitle("【仲陌美】2018春秋季新款原宿风长袖T恤女bf潮学生韩版拼接白色复古港味宽松百搭上衣打底");
             goods.setPrice(120.78);
             goods.setCollect(7680);
             recommends.add(goods);
